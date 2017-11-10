@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Language Tracking</title>
+		<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+		<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+		<script src='http://code.jquery.com/jquery-1.8.3.min.js'></script>
+		<style>
+			.player {
+				width:20%;
+				overflow:auto;
+				text-align: center;
+				padding:10px;
+				margin:auto;
+				border-radius:20px;
+				color:white;
+				font-family: Sans-Serif;
+			}
+			.begin {background-color:green;color:white;}
+			#container {
+				overflow:auto;
+				clear:both;
+				padding:50px;
+			}
+			#maincontent {
+				width:50%;
+				text-align: center;
+				padding:10px;
+				margin:auto;
+				border-radius:20px;
+				font-family: Sans-Serif;
+			}
+			#martian, #martian2 {float:left;background-color:red;}
+			#mercurian, #mercurian2 {float:right;background-color:blue;}
+		</style>
+	</head>
+	<body>
+		<button class='player' id='martian'>ENTER NAME</button>
+		<button class='player' id='mercurian'>ENTER NAME</button>
+		<p class='player' id='martian2'></p>
+		<p class='player' id='mercurian2'></p>
+		<script>
+			//;
+			//$('mercurian');
+
+//			(function loading () {martian.innerHTML = prompt('Enter a Martian word.','Swnitu');})();
+			$('#martian').click(function() {
+				$(this).text( prompt('Enter a Martian word.','Swnitu') );
+				console.log ( $(this).text() );
+				martian_script( $(this).text() );
+			});
+			function change_script(letters) {
+				return letters.toLowerCase().split('');
+			}
+
+			function martian_script (martian_letters) {
+				martian_letters = change_script(martian_letters);
+				console.log ( martian_letters );
+				console.log ( martian_letters.join('') );
+				for (var i=0; i<martian_letters.length; i++) {
+					if (martian_letters[i] == 't') {
+						martian_letters.splice(i, 0, 'h');
+					} else if (martian_letters[i] == 'k' && martian_letters[i+1] != 'i') {
+						martian_letters.splice(i, 0, 'y');
+					} else if (martian_letters[i] == 'c' && martian_letters[i+1] != 'h') {
+						martian_letters.splice(i, 1, 'ny');
+					} else if (martian_letters[i] == 'x') {
+						martian_letters.splice(i, 1, 'ch');
+					} else if (martian_letters[i] == 'z') {
+						martian_letters.splice(i, 0, 'h');
+					} else if (martian_letters[i] == 'd') {
+						martian_letters.splice(i, 1, 'sh');
+					} else if (martian_letters[i] == 'g') {
+						martian_letters.splice(i, 1, 'ng');
+					} /*else if (martian_letters[i] == 'h') {
+						if (martian_letters[i-1] != 'c' && martian_letters[i-1] != 't' && martian_letters[i-1] != 'z' && martian_letters[i-1] != 's') {
+							martian_letters[i] = "'";
+						} 
+					}*/
+				}
+				console.log ( martian_letters.join() );
+				$('#martian2').text( 'The pronunciation is: ' + martian_letters.join() );
+//				martian_print.innerHTML = function() {return'The pronunciation is: ' + martian_letters;}
+			}
+			function mercurian_script (mercurian_letters) {
+				
+			var mercurian_letters;
+			change_script(mercurian_letters);
+			}
+		</script>
+	</body>
+</html>

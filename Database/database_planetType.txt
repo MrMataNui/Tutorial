@@ -1,0 +1,7 @@
+1	Rocky
+2	Gas Giant
+3	Ice Giant
+4	Dwarf
+5	Asteroid
+6	Hot Jupiter
+7	Super Earth

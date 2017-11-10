@@ -1,0 +1,13 @@
+// get the outputs from HTML
+var output_mercury = document.getElementById("output_mercury");
+var output_venus = document.getElementById("output_venus");
+var output_earth = document.getElementById("output_earth");
+var output_mars = document.getElementById("output_mars");
+var output_jupiter = document.getElementById("output_jupiter");
+var output_saturn = document.getElementById("output_saturn");
+var output_uranus = document.getElementById("output_uranus");
+var output_neptune = document.getElementById("output_neptune");
+var output_pluto = document.getElementById("output_pluto");
+var output_ceres = document.getElementById("output_ceres");
+var output_eris = document.getElementById("output_eris");
+var output_makemake = document.getElementById("output_makemake");

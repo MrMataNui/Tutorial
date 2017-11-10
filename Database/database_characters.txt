@@ -1,0 +1,17 @@
+1	Vravag	Mercurian	Saberleaf	5	Mercurian	1	1
+2	Qonok	Venusian	HammerHead	5	Venusian	2	1
+3	Jalten	English	Incognito	7	Earther	3	2
+4	Swnitu	Martian	The Speaker	9	Martian	4	4
+5 	Borozw	Jovian	Dollmaker	10	Jovian	5	2
+6 	Pihoe-Xo	Saturnal	Absolute Zero	7	Saturnal	6	2
+7 	Osa	Neptutian	Thornhead	7	Neptutian	8	6
+8 	Pulof	Plutonian	Sillouette	9	Plutonian	9	4
+9 	Tenul	Ceresian	Unknown	20	Ceresian	10	5
+10 	Kasil	Makemakan	Unknown	18	Makemakan	11	6
+11 	Xaknel	Xekla	Unknown	25	Qenovan	12	7
+12 	Joex	Xekla	Unknown	25	Xulde	13	7
+13 	Fraq	Qenovan	Unknown	25	Qenovan	12	7
+14 	Kirasw	Martian	Unknown	10	Martian	4	3
+15 	Doxen	Plutonian	Unknown	8	Plutonian	9	2
+16 	Nula	Uransian	Unknown	0	Uransian	7	6
+17 	Unknown	Unknown	Unknown	0	Unknown	7	6

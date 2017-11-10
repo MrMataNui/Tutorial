@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Test</title>
+		<!--Sets the width to adjust to available screen size-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!--Bootstrap Code-->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Audiowide|Black+Ops+One|Fugaz+One|Amita|Atomic+Age|Griffy" rel="stylesheet">
+		<link rel="stylesheet" href="Grey_Lantern_About.css">
+		<link rel="stylesheet" href="Characters/Grey_Lantern_Characters.css">
+		<link rel="shortcut icon" href="Images/Grey_lantern_general_emblem.jpg">
+		<!-- Place this tag in your head or just before your close body tag. -->
+		<script src="https://apis.google.com/js/platform.js" async defer></script>
+		<!--<script src="Random_Roll.js"></script>-->
+		<script src="jquery/jquery-3.2.0.js"></script>
+		<script src="Extra/Random_Roll/Number%20Formatting/NumFormat.js"></script>
+		<style> h1{color: purple; font-family: 'Atomic Age', serif, cursive;} h2 {font-family: 'Black Ops One', serif, cursive;}</style>
+	</head>
+
+	<body>
+		<nav id="top">
+			<div class="btn-group btn-group-justified">
+				<div class="btn-group">
+					<a class="active" href="Index.html"><button type="button" class="btn btn-primary btn-lg">Home</button></a>
+				</div>
+				<div class="btn-group">
+					<a href="Characters/Grey_Lantern_Characters.html"><button type="button" class="btn btn-primary btn-lg">Characters</button></a>
+				</div>
+				<div class="btn-group">
+					<button type="button" class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown">History
+						<span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="Grey_Lantern_Story.html#Prologue">Prologue</a></li>
+						<li><a href="Grey_Lantern_Story.html#Part 1">Part 1</a></li>
+						<li><a href="Grey_Lantern_Story.html#Part 2">Part 2</a></li>
+						<li><a href="Grey_Lantern_Story.html#Part 3">Part 3</a></li>
+					</ul>
+				</div>
+				<div class="btn-group">
+					<button type="button" class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown">Magic
+						<span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="Magic_Classes/Magic_Classes.html">About Magic</a></li>
+						<li><a href="Magic_Classes/Fire_Magic.html">Pyrokinesis</a></li>
+						<li><a href="Magic_Classes/Air_Magic.html">Aerokinesis</a></li>
+						<li><a href="Magic_Classes/Water_Magic.html">Liquikinesis</a></li>
+						<li><a href="Magic_Classes/Stone_Magic.html">Geokinesis</a></li>
+						<li><a href="Magic_Classes/Space_Magic.html">Astrokinesis</a></li>
+					</ul>
+				</div>
+				<div class="btn-group">
+					<button type="button" class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown">Planets
+						<span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="Planets/Planets.html">About The Planets</a></li>
+						<li><a href="Planets/Mercury.html">Mercury</a></li>
+						<li><a href="Planets/Venus.html">Venus</a></li>
+						<li><a href="Planets/Earth.html">Earth</a></li>
+						<li><a href="Planets/Mars.html">Mars</a></li>
+						<li><a href="Planets/Ganymede.html">Ganymede</a></li>
+						<li><a href="Planets/Titan.html">Titan</a></li>
+						<li><a href="Planets/Titania.html">Titania</a></li>
+						<li><a href="Planets/Triton.html">Triton</a></li>
+						<li><a href="Planets/Pluto_Charon.html">Pluto & Charon</a></li>
+					</ul>
+				</div>
+				<div class="btn-group">
+					<button type="button" class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown">About Me
+						<span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="About_Me.html">About Me</a></li>
+						<li><a href="Contact_Me.html">Contact Me</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class="btn-group-vertical sidenav_left btn">
+			<a href="#top"><button type="button" class="btn btn-default btn-md">Back to Top</button></a>
+		</div>
+		<main>
+			<h2><a href="Planets/Planets.html">Planets</a></h2>
+			<table class="clear">
+				<tr>
+					<td><button type="button" class="rocky planet" id="output_mercury_ex">&#x263F;</button></td>
+					<td><button type="button" class="rocky planet" id="output_venus_ex">&#x2640;</button></td>
+				</tr>
+				<tr>
+					<td><button type="button" class="rocky planet" id="output_earth_ex">&#x2641;</button></td>
+					<td><button type="button" class="rocky planet" id="output_mars_ex">&#x2642;</button></td>
+				</tr>
+				<tr>
+					<td><button type="button" class="gas_giant planet" id="output_jupiter_ex">&#x2643;</button></td>
+					<td><button type="button" class="gas_giant planet" id="output_saturn_ex">&#x2644;</button></td>
+				</tr>
+				<tr>
+					<td><button type="button" class="ice_giant planet" id="output_uranus_ex">&#x2645;</button></td>
+					<td><button type="button" class="ice_giant planet" id="output_neptune_ex">&#x2646;</button></td>
+				</tr>
+				<tr>
+					<td><button type="button" class="dwarf planet" id="output_pluto_ex">&#x2647;</button></td>
+					<td><button type="button" class="dwarf planet" id="output_charon_ex">&#x2647;</button></td>
+				</tr>
+			</table>
+			<p></p>
+			<p></p>
+		</main>
+	<!--<button type="button" onclick="my_function()">Test Input</button>-->
+			<script src="Grey_Lantern_Planets2.js"></script>
+		
+	</body>
+</html>
