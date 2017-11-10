@@ -1,0 +1,8 @@
+1	Sol	0.00	1.0	false
+2	Alpha Centauri B	4.40	0.93	true
+3	Epsilon Eridani	10.50	0.83	false
+4	Ross 780	15.30	0.32	false
+5	Wolf 562	20.70	0.31	false
+6	GJ 667 C	22.30	0.33	true
+7	Gliese 687	14.70	0.41	false
+8	Gliese 674	14.81	0.41	false

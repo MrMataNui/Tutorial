@@ -1,0 +1,16 @@
+h1{color: purple; font-family: 'Atomic Age', cursive;}
+h2 {font-family: 'Black Ops One', cursive;}
+main {height: auto;}
+table.clear, table.clear th, table.clear td {border: none;border-collapse: none;}
+table.clear th, table.clear td {width:50%;}
+.planet {width: 75%;overflow: auto;text-align: center;padding: 10px;margin: 0 auto;border-radius:20px;color: white;font-family: Sans-Serif;display: block;}
+.info {padding: auto;width: 10%;height: auto;position: fixed;overflow: auto;float: right;border-radius:20px;}
+.soya {padding: auto;margin: 0 auto;width: 12.5%;height: auto;overflow: auto;position: fixed;float: right;border-radius: 20px;}
+.rocky {background-color:brown;}
+.gas_giant {background-color:orange;color:black;}
+.ice_giant {background-color:#59C5EE;color:black;}
+.asteroid {background-color:gray;}
+.dwarf {background-color:#256076;}
+#new_output, #new_output2 {background-color:black;}
+#year {background-color:#a5ecd8;color:black;width: 70%;}
+#soya, #test {color:black;width: 70%;}

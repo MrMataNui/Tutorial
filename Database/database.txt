@@ -1,0 +1,124 @@
+DROP DATABASE IF EXISTS Grey_Lantern_Characters;
+CREATE DATABASE Grey_Lantern_Characters;
+USE Grey_Lantern_Characters;
+SELECT DATABASE();
+
+CREATE TABLE planetType (
+	planetTypeID	INT(11)			NOT NULL	AUTO_INCREMENT,
+	planetType		VARCHAR(255)	NOT NULL,
+	PRIMARY KEY (planetTypeID));
+
+LOAD DATA LOCAL INFILE
+'database_planetType.txt'
+INTO TABLE planetType;
+
+CREATE TABLE planets (
+	planetID		INT(11)			NOT NULL	AUTO_INCREMENT,
+	planetName		VARCHAR(255)	NOT NULL,
+	planetTypeID	INT(11)			NOT NULL,
+	starListID		INT(11)			NOT NULL,
+	PRIMARY KEY (planetID));
+
+LOAD DATA LOCAL INFILE
+'database_planets.txt'
+INTO TABLE planets;
+
+CREATE TABLE magic (
+	magicID		INT(11)			NOT NULL	AUTO_INCREMENT,
+	magicName	VARCHAR(255)	NOT NULL,
+	magicType	VARCHAR(255)	NOT NULL,
+	PRIMARY KEY (magicID));
+
+LOAD DATA LOCAL INFILE
+'database_magic.txt'
+INTO TABLE magic;
+
+CREATE TABLE characters (
+	charID			INT(11)			NOT NULL	AUTO_INCREMENT,
+	charName		VARCHAR(255)	NOT NULL,
+	charLanguage	VARCHAR(255)	NOT NULL,
+	charIdentity	VARCHAR(255)	NOT NULL,
+	charAge			INT(11)			NOT NULL,
+	charRace		VARCHAR(255)	NOT NULL,
+	planetID		INT(11)			NOT NULL,
+	magicID			INT(11)			NOT NULL,
+	PRIMARY KEY (charID));
+
+LOAD DATA LOCAL INFILE
+'database_characters.txt'
+INTO TABLE characters;
+
+CREATE TABLE planetList (
+	planetListID	INT(11)			NOT NULL	AUTO_INCREMENT,
+	starListID		INT(11)			NOT NULL,
+	planetName		VARCHAR(255)	NOT NULL,
+	status			VARCHAR(255)	NOT NULL,
+	period			FLOAT(11)		NOT NULL,
+	discoveryYear	INT(11)			NOT NULL,
+	AU				FLOAT(11)		NOT NULL,
+	planetTypeID	INT(11)			NOT NULL,
+	PRIMARY KEY (planetListID));
+
+LOAD DATA LOCAL INFILE
+'database_planetList.txt'
+INTO TABLE planetList;
+
+CREATE TABLE starList (
+	starListID		INT(11)			NOT NULL 	AUTO_INCREMENT,
+	star			VARCHAR(255)	NOT NULL,
+	distance		FLOAT(11)		NOT NULL,
+	stellarMass		FLOAT(11)		NOT NULL,
+	multiStar		BOOLEAN			NOT NULL,
+	PRIMARY KEY (starListID));
+
+LOAD DATA LOCAL INFILE
+'database_starList.txt'
+INTO TABLE starList;
+
+CREATE TABLE AllInfo AS (
+	SELECT
+		characters.charID,
+		characters.charName,
+		characters.charLanguage,
+		characters.charIdentity,
+		characters.charAge,
+		characters.charRace,
+
+		planets.planetID,
+		planets.planetName,
+
+		planetType.planetType,
+
+		starList.star,
+
+		magic.magicName,
+		magic.magicType
+
+	FROM ((((characters
+	INNER JOIN magic ON characters.magicID = magic.magicID)
+	INNER JOIN planets ON characters.planetID = planets.planetID)
+	INNER JOIN planetType ON planets.planetTypeID = planetType.planetTypeID)
+	INNER JOIN starList ON planets.starListID = starList.starListID)
+);
+
+CREATE TABLE planetStarList AS (
+	SELECT
+		planetList.planetListID,
+		planetList.planetName,
+		planetList.status,
+		planetList.period,
+		planetList.discoveryYear,
+		planetList.AU,
+
+		planetType.planetType,
+
+		starList.starListID,
+		starList.star,
+		starList.distance,
+		starList.multiStar,
+		starList.stellarMass
+
+	FROM ((planetList
+	INNER JOIN planetType ON planetList.planetTypeID = planetType.planetTypeID)
+	INNER JOIN starList ON planetList.starListID = starList.starListID)
+);

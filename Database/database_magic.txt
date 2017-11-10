@@ -1,0 +1,7 @@
+1 	Pyrokinesis			plasma
+2 	Aerokinesis			gas
+3 	Liquikinesis		liquid
+4 	Geokinesis			solid
+5 	Astrokinesis		space
+6 	N/A					N/A
+7 	Unknown				Unknown
